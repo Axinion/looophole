@@ -1,3 +1,5 @@
+// Solution 1
+
 void reverseArray(vector<int> &arr , int m) {
     vector<int> ans;
     int n= arr.size();
@@ -8,4 +10,16 @@ void reverseArray(vector<int> &arr , int m) {
         ans.push_back(arr[j]);
     }
     arr = ans;
+}
+
+// Solution 2
+
+void reverseArray(vector<int> &arr , int m) {
+    int s = m+1;
+    int e = arr.size()-1;
+    while(s<=e){
+        swap(arr[s], arr[e]);
+        s++;
+        e--;
+    }
 }
