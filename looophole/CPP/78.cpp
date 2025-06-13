@@ -9,10 +9,10 @@ private:
             ans.push_back(output);
             return;
         }
-        // include
+        // exclude
         solve(nums, output, index+1, ans);
 
-        // exclude
+        // include
         int element = nums[index];
         output.push_back(element);
         solve(nums, output, index+1, ans);
