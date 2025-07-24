@@ -1,3 +1,5 @@
+// From Scratch 
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,3 +21,25 @@ int main() {
 	}
 	cout<<Sumi(arr, size);
 }
+
+// GFG - Recursion
+
+// User function template for C++
+class Solution {
+    
+    int getSum(vector<int>& arr, int index){
+        // base case
+        if(index==arr.size()){
+            return 0;
+        }
+        return arr[index] + getSum(arr, index+1);
+    }
+    
+  public:
+    // Function to return the sum of elements
+    int arraySum(vector<int>& arr) {
+        // code here
+        int ans = getSum(arr, 0);
+        return ans;
+    }
+};
