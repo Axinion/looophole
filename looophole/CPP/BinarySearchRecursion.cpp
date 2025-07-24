@@ -36,3 +36,38 @@ int main() {
 	    cout<<"not present"<<endl;
 	}
 }
+
+
+// GFG -> Binary Search -> Recursion
+
+class Solution {
+    
+    int bs(vector<int>& arr, int s, int e, int k){
+        // base case
+        if(s>e){
+            return -1;
+        }
+        int mid = s + (e-s)/2;
+        if(arr[mid]==k){
+            int leftSearch = bs(arr, s, mid-1, k);
+            return(leftSearch != -1) ? leftSearch : mid;
+        }
+        
+        if(arr[mid]>k){
+            return bs(arr, s, mid-1, k);
+        }
+        else{
+            return bs(arr, mid+1, e, k);
+        }
+    } 
+    
+  public:
+    int binarysearch(vector<int> &arr, int k) {
+        // code here
+        int ans = bs(arr, 0, arr.size()-1, k);
+        return ans;
+        
+    }
+};
+
+
