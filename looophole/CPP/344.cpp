@@ -23,3 +23,27 @@ public:
         }
     }
 };
+
+// Solution 3
+
+/*
+class Solution {
+public:
+
+    void reverse(int i, int j, vector<char>& s){
+        //base case
+        if(i>j){
+            return;
+        }
+        swap(s[i], s[j]);
+        i++;
+        j--;
+        reverse(i, j, s);
+    }
+
+    void reverseString(vector<char>& s) {
+        reverse(0, s.size()-1, s);
+    }
+};
+
+*/
