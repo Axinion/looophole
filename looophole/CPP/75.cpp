@@ -60,4 +60,34 @@ public:
         }
     }
 };
+
+
+
+// Solution 2 -> Insertion Sort (Using Recursion)
+
+#include <bits/stdc++.h>
+
+void sort(vector<int>& arr, int n, int s){
+    // base case
+    if(s>=n){
+        return;
+    }
+    int temp = arr[s];
+    int i = s-1;
+    while(i>=0){
+        if(arr[i]>temp){
+            arr[i+1] = arr[i];
+        }
+        else{
+            break;
+        }
+        i-=1;
+    }
+    arr[i+1] = temp;
+    sort(arr, n, s+1);
+}
+
+void insertionSort(int n, vector<int> &arr){
+    sort(arr, n, 1);
+}
 */
