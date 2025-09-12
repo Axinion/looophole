@@ -1,3 +1,5 @@
+// Solution 1 -> Bit Manupilation - ExOR
+
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
@@ -9,6 +11,8 @@ public:
     }
 };
 
+
+// Solution 2 -> HashSet
 
 class Solution {
 public:
