@@ -1,3 +1,5 @@
+//Solution 1 -> Bit Mask
+
 class Solution {
 public:
     int hammingWeight(int n) {
@@ -9,5 +11,14 @@ public:
             n=n>>1;
         }
         return c;
+    }
+};
+
+// Solution 2 -> Inbuilt Function
+
+class Solution {
+public:
+    int hammingWeight(int n) {
+        return __builtin_popcount(n);
     }
 };
