@@ -14,7 +14,7 @@ void reverseArray(vector<int> &arr , int m) {
 
 // Solution 2
 
-void reverseArray(vector<int> &arr , int m) {
+void reverseArray(vector<int> &arr , int m) {    // if m=0 then basically starting from start
     int s = m+1;
     int e = arr.size()-1;
     while(s<=e){
@@ -23,3 +23,12 @@ void reverseArray(vector<int> &arr , int m) {
         e--;
     }
 }
+
+// Solution 3:
+
+class Solution {
+  public:
+    void reverseArray(vector<int> &arr) {
+        reverse(arr.begin(), arr.end());
+    }
+};
