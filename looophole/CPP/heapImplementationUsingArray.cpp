@@ -1,6 +1,7 @@
 // Heap Implementation Using Array
 
 #include <bits/stdc++.h>
+#include <queue>
 using namespace std;
 
 class heap{
@@ -145,5 +146,10 @@ int main() {
 	    cout<<arr[i]<<" ";
 	}
 	cout<<endl;
+
+	// max heap
+	priority_queue<int> pq1;
+	// min heap
+    priority_queue<int, vector<int>, greater<int>> pq2;
 
 }
