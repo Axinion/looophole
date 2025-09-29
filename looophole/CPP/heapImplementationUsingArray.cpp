@@ -147,9 +147,9 @@ int main() {
 	}
 	cout<<endl;
 
-	// max heap
+	// max heap inbuilt
 	priority_queue<int> pq1;
-	// min heap
+	// min heap inbuilt
     priority_queue<int, vector<int>, greater<int>> pq2;
 
 }
