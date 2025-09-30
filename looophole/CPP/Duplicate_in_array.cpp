@@ -1,5 +1,4 @@
-#include <set>
-
+// Solution 1:
 int findDuplicate(vector<int> &arr) 
 {
     int ans = 0;
@@ -10,4 +9,21 @@ int findDuplicate(vector<int> &arr)
         ans = ans ^ i;
     }
     return ans;
+}
+
+
+// Solution 2:
+
+#include <unordered_map>
+
+int findDuplicate(vector<int> &arr) 
+{
+    unordered_map<int,int> seen;
+    for(int x: arr){
+        seen[x]++;
+        if(seen[x]>1){
+            return x;
+        }
+    }
+    return -1;
 }
