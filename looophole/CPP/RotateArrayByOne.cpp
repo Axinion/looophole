@@ -25,3 +25,27 @@ class Solution {
         }
     }
 };
+
+// Solution 3:
+#include <algorithm>
+class Solution {
+  public:
+    void rotate(vector<int>& arr) {
+        if (arr.size() <= 1) return;
+        reverse(arr.begin(), arr.end());
+        reverse(arr.begin()+1, arr.end());
+    }
+};
+
+// Solution 4 -> Better than solution 2
+
+class Solution {
+  public:
+    void rotate(vector<int>& arr) {
+        int n = arr.size();
+        if (n <= 1) return;
+        int last = arr[n-1];
+        for (int i = n-1; i > 0; --i) arr[i] = arr[i-1];
+        arr[0] = last;
+    }
+}
