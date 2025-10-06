@@ -1,4 +1,4 @@
-// Solution 1: Recursion + comparison
+// Solution 1: Recursion + Comparison
 
 
 /**
