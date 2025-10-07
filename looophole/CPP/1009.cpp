@@ -1,3 +1,4 @@
+// Solution 1:
 
 #include<math.h>
 class Solution {
